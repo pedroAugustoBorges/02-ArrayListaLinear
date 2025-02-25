@@ -106,4 +106,27 @@ void inserirElemento()
 void buscarElemento()
 {
 
+	int elemento = 0;
+
+	int qntdElementosEncontrados = 0;
+
+	cout << "Digite o valor a ser buscado: ";
+
+	cin >> elemento;
+
+	for (int i = 0; i < nElementos; i++) {
+
+		if (lista[i] == elemento) {
+			qntdElementosEncontrados++;
+			cout << "Elemento na posição:" << i << endl;
+		}
+	}
+
+	if (qntdElementosEncontrados > 0) {
+		cout << "Elemento: " << elemento << " encontrado " << endl << "Encontrado: " << qntdElementosEncontrados << " vezes" << endl;
+	}
+	else {
+		cout << "Elemento nao encontrado" << endl;
+	}
+
 }
